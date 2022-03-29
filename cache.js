@@ -1,9 +1,6 @@
 export const foreverEdge = {
   browser: false,
-  edge: {
-    staleWhileRevalidateSeconds: 1,
-    maxAgeSeconds: 60 * 60 * 60 * 365,
-  },
+  edge: false,
 }
 
 export const assetCache = {
@@ -21,10 +18,7 @@ export const SSR_CACHE_HANDLER = ({ removeUpstreamResponseHeader, cache }) => {
   removeUpstreamResponseHeader('cache-control')
   cache({
     browser: false,
-    edge: {
-      maxAgeSeconds: 60 * 60 * 24 * 365 * 10,
-      staleWhileRevalidateSeconds: 60 * 60 * 24,
-    },
+    edge: false,
   })
 }
 

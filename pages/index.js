@@ -24,6 +24,10 @@ export default Home
 export async function getServerSideProps() {
   const fetchCall = await fetch('https://api.tvmaze.com/schedule?country=US&date=2014-12-01')
   const data = await fetchCall.json()
+
+  console.log('Loading homepage')
+  console.log('data', JSON.stringify(data))
+
   return {
     props: {
       data,
