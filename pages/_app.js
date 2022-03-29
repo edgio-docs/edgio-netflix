@@ -32,7 +32,7 @@ const MyApp = ({ Component, pageProps }) => {
   }, [])
 
   return (
-    <div className="bg-[#181818] w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center">
       <Link href="/">
         <a>
           <Prefetch url="/">
