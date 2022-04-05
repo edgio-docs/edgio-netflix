@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Item = ({ id, name, image }) => {
   return (
-    <Link href={`/show/${id}`}>
+    <Link href={`/show/${id}`} passHref>
       <a>
         {/* it's critical that the keys match the param names in your next page routes */}
         <div
