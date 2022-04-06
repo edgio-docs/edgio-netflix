@@ -18,8 +18,8 @@ const device = puppeteer.devices['Galaxy S9+']
 
 async function main() {
   const browser = await puppeteer.launch({
-    headless: false,
-    slowMo: 100,
+    // headless: false,
+    // slowMo: 100,
   })
   const page = await browser.newPage()
 
