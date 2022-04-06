@@ -23,6 +23,12 @@ async function main() {
   })
   const page = await browser.newPage()
 
+  const sleep = (time) => {
+    return new Promise((resolve) => {
+      setTimeout(resolve, time)
+    })
+  }
+
   page.emulate(device)
 
   const ssr = await browser.newPage()
@@ -65,7 +71,10 @@ async function main() {
         await ssr.goto(`${base}${link}`, { waitUntil: 'networkidle0' })
 
         // ensure FID is collected
-        await ssr.evaluate(() => document.querySelector('h1').click())
+        await sleep(250)
+        await ssr.evaluate(() => document.querySelector('button').click())
+        await sleep(250)
+
         await page.goto(base, { waitUntil: 'networkidle0' })
       } catch (e) {
         console.error(`Error loading ${link}`, e)

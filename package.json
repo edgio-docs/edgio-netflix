@@ -11,6 +11,7 @@
   },
   "name": "layer0-netflix",
   "dependencies": {
+    "@layer0/rum": "^3.0.0",
     "next": "^12.1.2",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
