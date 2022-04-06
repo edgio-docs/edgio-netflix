@@ -18,10 +18,11 @@ const device = puppeteer.devices['Galaxy S9+']
 
 async function main() {
   const browser = await puppeteer.launch({
-    // headless: false,
-    // slowMo: 100,
+    headless: false,
+    slowMo: 100,
   })
   const page = await browser.newPage()
+
   page.emulate(device)
 
   const ssr = await browser.newPage()
@@ -53,6 +54,7 @@ async function main() {
       try {
         await page.evaluate(async (link) => {
           const el = document.querySelector(`a[href="${link}"]`)
+          caches.delete('prefetch') // clear the service worker cache so we actually hit the backend
           if (el) el.click()
           document.querySelector('h1').click()
         }, link)
