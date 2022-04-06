@@ -1,7 +1,7 @@
 /*
 This simple puppeteer script simulates real mobile traffic to populate RUM and traffic graphs in Layer0 console.
 */
-const [_node, _file, base] = process.argv
+let [_node, _file, base] = process.argv
 
 if (!base) {
   console.log('Usage: node ./simulate-traffic <url>')
@@ -11,14 +11,15 @@ if (!base) {
   process.exit(0)
 }
 
+base = base.replace(/\/$/, '') // trim trailing slash if present
+
 const puppeteer = require('puppeteer')
 const device = puppeteer.devices['Galaxy S9+']
 
 async function main() {
-  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
   const browser = await puppeteer.launch({
-    // headless: false,
-    // slowMo: 1000,
+    headless: false,
+    slowMo: 100,
   })
   const page = await browser.newPage()
   page.emulate(device)
