@@ -3,11 +3,6 @@ import '../styles/globals.css'
 import { useEffect } from 'react'
 import NextImage from 'next/image'
 import { useRouter } from 'next/router'
-import { Metrics } from '@layer0/rum'
-
-new Metrics({
-  token: 'f40d8a44-c529-40ce-89da-7847c7321c11',
-}).collect()
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter()
