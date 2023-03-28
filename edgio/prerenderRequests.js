@@ -11,7 +11,7 @@ if (existsSync(buildIdPath)) {
 // Import fetch to fetch and create prerender routes
 import fetch from 'node-fetch'
 
-// Function definition referred from node_modules/@layer0/next/client.js
+// Function definition referred from node_modules/@edgio/next/client.js
 // More on createNextDataURL: https://docs.layer0.co/guides/next#prefetching
 const createNextDataURL = (params) => {
   if (buildId) {

@@ -1,11 +1,11 @@
 import Rating from '@/components/Rating'
 import { relativizeURL, getOrigin } from '@/lib/helper'
+import Image from 'next/image'
 
 const Show = ({ data }) => {
-  let image = data.image.hasOwnProperty('medium') ? data.image['medium'] : data.image['original']
   return (
     <>
-      <img className="mt-10" src={relativizeURL(image)} />
+      <Image className="mt-10" height={295} width={210} src={data.image.original} />
       {data.name && <h1 className="mt-5 text-center text-4xl font-bold text-white md:text-left">{data.name}</h1>}
       <div className="mt-10 flex w-full flex-col items-center sm:mt-0 sm:w-1/2 sm:items-start md:w-2/3">
         <div className="mt-5 flex flex-row flex-wrap items-start justify-center gap-x-10 md:justify-start">
@@ -97,7 +97,7 @@ const Show = ({ data }) => {
 export default Show
 
 export async function getServerSideProps({ req, params }) {
-  const fetchCall = await fetch(`${getOrigin(req)}/l0-api/shows/${params.id}`)
+  const fetchCall = await fetch(`${getOrigin(req)}/tvmaze/shows/${params.id}`)
   const data = await fetchCall.json()
   return {
     props: {
