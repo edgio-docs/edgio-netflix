@@ -1,6 +1,21 @@
 import { nextRoutes } from '@edgio/next'
 import { Router } from '@edgio/core/router'
-import { CACHE_DATA, CACHE_HTML } from './cache'
+
+export const CACHE_HTML = {
+  caching: {
+    max_age: '1d',
+    stale_while_revalidate: '1y',
+    ignore_origin_no_cache: [200],
+    bypass_client_cache: true,
+  },
+}
+
+export const CACHE_DATA = {
+  caching: {
+    ...CACHE_HTML.caching,
+    service_worker_max_age: '1d',
+  },
+}
 
 export default new Router()
   .use(nextRoutes)
@@ -41,10 +56,10 @@ export default new Router()
     headers: {
       debug_header: true,
     },
-    // caching: {
-    //   cache_key_rewrite: {
-    //     source: '(.*)',
-    //     destination: '%{usrvar_edgio_cache_version}/$1',
-    //   },
-    // },
+    caching: {
+      cache_key_rewrite: {
+        source: '(.*)',
+        destination: '%{usrvar_edgio_cache_version}/$1',
+      },
+    },
   })
