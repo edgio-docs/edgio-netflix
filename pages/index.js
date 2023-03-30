@@ -8,7 +8,7 @@ const Home = ({ data, country }) => {
         These days, the small screen has some very big things to offer. From sitcoms to dramas to travel and talk shows, these are all the best shows
         on TV.
       </h2>
-      <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+      <div className="mt-10 grid grid-cols-2 gap-10 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
         {data
           .filter((item) => item.show.image)
           .map((item, index) => (

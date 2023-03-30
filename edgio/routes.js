@@ -13,7 +13,7 @@ export const CACHE_HTML = {
 export const CACHE_DATA = {
   caching: {
     ...CACHE_HTML.caching,
-    service_worker_max_age: '1d',
+    // service_worker_max_age: '1d',
   },
 }
 

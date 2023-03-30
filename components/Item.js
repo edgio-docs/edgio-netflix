@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Item = ({ id, name, image }) => {
   return (
-    <Link href={`/show/${id}`} className="w-[150px]">
+    <Link href={`/show/${id}`}>
       <Prefetch
         url={createNextDataURL({
           href: `/show/${id}`,
@@ -21,7 +21,9 @@ const Item = ({ id, name, image }) => {
             }
           }}
         >
-          <Image alt={name} src={image.original} width="0" height="0" sizes="25vw" style={{ width: '100%', height: 'auto' }} />
+          <div style={{ aspectRatio: '150 / 225' }}>
+            <Image alt={name} src={image.original} width="0" height="0" sizes="25vw" style={{ width: '100%', height: 'auto' }} />
+          </div>
           <h3 className="mt-3 max-w-[200px] text-gray-300">{name}</h3>
         </div>
       </Prefetch>

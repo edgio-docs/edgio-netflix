@@ -28,7 +28,7 @@ const MyApp = ({ Component, pageProps }) => {
   }, [])
   return (
     <div className="flex min-h-screen flex-col items-center bg-gradient-to-br from-[#9a1ab1] via-[#004966] to-[#01B18D]">
-      <div className="flex w-full max-w-6xl flex-col items-start">
+      <div className="flex w-full max-w-6xl flex-col items-start px-5">
         <Navbar />
         <Component key={router.asPath} {...pageProps} />
         <div className="w-full py-5"></div>
