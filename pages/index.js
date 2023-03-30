@@ -1,5 +1,4 @@
 import Item from '@/components/Item'
-import { getOrigin } from '@/lib/helper'
 
 const Home = ({ data, country }) => {
   return (
@@ -22,25 +21,13 @@ const Home = ({ data, country }) => {
 
 export default Home
 
-export async function getServerSideProps({ req }) {
-  const url = `${getOrigin(req)}/tvmaze/schedule?country=US&date=2014-12-01`
-  console.log(`fetching ${url}`)
-  const res = await fetch(url)
+export async function getServerSideProps() {
+  const res = await fetch('https://api.tvmaze.com/schedule?country=US&date=2014-12-01')
   const data = await res.json()
 
   return {
     props: {
       data,
-      country: getCountryName(req.headers['x-geo-country'] || null),
     },
   }
-}
-
-const codes = {
-  EE: 'Estonia',
-  US: 'United States',
-}
-
-function getCountryName(code) {
-  return codes[code] || null
 }

@@ -21,7 +21,7 @@ const Item = ({ id, name, image }) => {
             }
           }}
         >
-          <Image src={image.medium} height={210} width={150} />
+          <Image alt={name} src={image.original} width="0" height="0" sizes="25vw" style={{ width: '100%', height: 'auto' }} />
           <h3 className="mt-3 max-w-[200px] text-gray-300">{name}</h3>
         </div>
       </Prefetch>

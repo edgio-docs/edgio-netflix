@@ -31,9 +31,9 @@ export default new Router()
   // More on static prerendering: https://docs.layer0.co/guides/static_prerendering
   // .prerender(getPathsToPrerender)
   // Serve the compiled service worker with Layer0 prefetcher working
-  // .match('/service-worker.js', ({ serviceWorker }) => {
-  //   return serviceWorker('.next/static/service-worker.js')
-  // })
+  .match('/service-worker.js', ({ serviceWorker }) => {
+    return serviceWorker('.next/static/service-worker.js')
+  })
   .match('/_next/data/:path*', CACHE_DATA)
   .match('/tvmaze/:path*', {
     ...CACHE_DATA,
@@ -56,10 +56,10 @@ export default new Router()
     headers: {
       debug_header: true,
     },
-    caching: {
-      cache_key_rewrite: {
-        source: '(.*)',
-        destination: '%{usrvar_edgio_cache_version}/$1',
-      },
-    },
+    // caching: {
+    //   cache_key_rewrite: {
+    //     source: '(.*)',
+    //     destination: '%{usrvar_edgio_cache_version}/$1',
+    //   },
+    // },
   })
