@@ -6,6 +6,7 @@ import Image from 'next/image'
 const Item = ({ id, name, image }) => {
   return (
     <Link href={`/show/${id}`}>
+      {/* Prefetch the JSON data for each show into the service worker cache when the link scrolls into the viewport so that navigation is instant */}
       <Prefetch
         url={createNextDataURL({
           href: `/show/${id}`,

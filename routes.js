@@ -13,7 +13,7 @@ export const CACHE_HTML = {
 export const CACHE_DATA = {
   caching: {
     ...CACHE_HTML.caching,
-    // service_worker_max_age: '1d',
+    service_worker_max_age: '1h',
   },
 }
 
@@ -30,36 +30,17 @@ export default new Router()
   // for future visits (expected to be the first view for real users)
   // More on static prerendering: https://docs.layer0.co/guides/static_prerendering
   // .prerender(getPathsToPrerender)
-  // Serve the compiled service worker with Layer0 prefetcher working
-  .match('/service-worker.js', ({ serviceWorker }) => {
-    return serviceWorker('.next/static/service-worker.js')
-  })
-  .match('/_next/data/:path*', CACHE_DATA)
-  .match('/tvmaze/:path*', {
-    ...CACHE_DATA,
-    origin: {
-      set_origin: 'api',
-    },
-    url: {
-      url_rewrite: [
-        {
-          source: '/tvmaze/:path*:slash(\\/?)?:qs(\\?.*)?',
-          syntax: 'path-to-regexp',
-          destination: '/:path*:slash:qs',
-        },
-      ],
-    },
-  })
-  .match('/', CACHE_HTML)
-  .match('/show/:id', CACHE_HTML)
-  .match('/:path*', {
-    headers: {
-      debug_header: true,
-    },
-    // caching: {
-    //   cache_key_rewrite: {
-    //     source: '(.*)',
-    //     destination: '%{usrvar_edgio_cache_version}/$1',
-    //   },
-    // },
-  })
+  .get('/_next/data/:path*', CACHE_DATA)
+  .get('/', CACHE_HTML)
+  .get('/show/:id', CACHE_HTML)
+// .match('/:path*', {
+//   headers: {
+//     debug_header: true,
+//   },
+//   // caching: {
+//   //   cache_key_rewrite: {
+//   //     source: '(.*)',
+//   //     destination: '%{usrvar_edgio_cache_version}/$1',
+//   //   },
+//   // },
+// })

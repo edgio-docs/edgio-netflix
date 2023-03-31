@@ -8,16 +8,16 @@
     "format": "prettier --write '**/*' --ignore-unknown"
   },
   "dependencies": {
-    "@edgio/cli": "file:.yalc/@edgio/cli",
-    "@edgio/core": "file:.yalc/@edgio/core",
-    "@edgio/next": "file:.yalc/@edgio/next",
-    "@edgio/prefetch": "file:.yalc/@edgio/prefetch",
-    "@edgio/react": "file:.yalc/@edgio/react",
     "next": "^13.2.4",
     "react": "^18.0.1",
     "react-dom": "^18.0.1"
   },
   "devDependencies": {
+    "@edgio/cli": "^7.0.0-pre-v7-1680276891.0",
+    "@edgio/core": "^7.0.0-pre-v7-1680276891.0",
+    "@edgio/next": "^7.0.0-pre-v7-1680276891.0",
+    "@edgio/prefetch": "^7.0.0-pre-v7-1680276891.0",
+    "@edgio/react": "^7.0.0-pre-v7-1680276891.0",
     "@edgio/rum": "^7.0.1",
     "@heroicons/react": "^1.0.6",
     "autoprefixer": "^10.4.7",
