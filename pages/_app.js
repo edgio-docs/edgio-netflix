@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import initRUM from 'edgio/rum'
 import { useRouter } from 'next/router'
 import Navbar from '@/components/Navbar'
-import { install } from '@edgio/prefetch/window'
+import { useServiceWorker } from '@edgio/react'
 
 // Include the RUM Analytics in the production build only
 if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
@@ -13,10 +13,10 @@ if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter()
 
-  useEffect(() => {
-    // Enable service worker inside the window
-    install()
+  // Install the service worker to enable prefetching
+  useServiceWorker({ dev: false /* set to true to install the service worker in development mode */ })
 
+  useEffect(() => {
     // Enable devtools manually, instead of relying on defaults by Layer0
     const handleRouteChange = () => {
       if (window.location.href.replace(/\/$/, '') === window.location.origin.replace(/\/$/, '')) {

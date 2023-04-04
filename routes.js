@@ -18,6 +18,11 @@ export const CACHE_DATA = {
 }
 
 export default new Router()
+  .match('/:path*', {
+    headers: {
+      debug_header: true,
+    },
+  })
   .use(nextRoutes)
   // Regex to catch multiple hostnames
   // Any deployment will have a L0 permalink
@@ -33,14 +38,3 @@ export default new Router()
   .get('/_next/data/:path*', CACHE_DATA)
   .get('/', CACHE_HTML)
   .get('/show/:id', CACHE_HTML)
-// .match('/:path*', {
-//   headers: {
-//     debug_header: true,
-//   },
-//   // caching: {
-//   //   cache_key_rewrite: {
-//   //     source: '(.*)',
-//   //     destination: '%{usrvar_edgio_cache_version}/$1',
-//   //   },
-//   // },
-// })
