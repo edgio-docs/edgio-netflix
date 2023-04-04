@@ -989,8 +989,10 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@edgio/cli@file:.yalc/@edgio/cli":
-  version "7.0.1"
+"@edgio/cli@^7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@edgio/cli/-/cli-7.0.4.tgz#756c1567eb4d728f99db359543c16337b76c5e66"
+  integrity sha512-T9IATiUJw3fqHo+nBjgjy4IO/tvX9RUf55ATwZlEVIPkYC5dppjdyeh++5It9Qn9NYp+RC0rM7Jg0asCIpEWdQ==
   dependencies:
     axios "^0.21.2"
     chalk "^4.1.2"
@@ -1034,10 +1036,10 @@
     yauzl "^2.10.0"
     yazl "^2.5.1"
 
-"@edgio/core@^7.0.1":
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/@edgio/core/-/core-7.0.2.tgz#087e977851d4b8b546a9422cb9ee07469597dd8c"
-  integrity sha512-acMBu15jWL0MZfO1R/BrdhV0+ve/VyQfxleUSm+KG9U3En8HRJFHnN56NATKR7IQRMi1Ps0SuJfVBXL9C6D+mA==
+"@edgio/core@^7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@edgio/core/-/core-7.0.4.tgz#405079b8a7449936d07993ef3429fc473807ec8c"
+  integrity sha512-2Nwh9Gp1t+EUEXiKKB/QqKs/K5K9a163VVHwUaqeNmKi0tq1CxotFtXNqTPHzi7J+O7f6PAhoz2rVUC62BPPlA==
   dependencies:
     "@babel/parser" "^7.18.9"
     "@babel/traverse" "^7.18.9"
@@ -1077,49 +1079,10 @@
     uuid "^8.3.2"
     workbox-build "^6.5.4"
 
-"@edgio/core@file:.yalc/@edgio/core":
-  version "7.0.1"
-  dependencies:
-    "@babel/parser" "^7.18.9"
-    "@babel/traverse" "^7.18.9"
-    "@types/lodash.clonedeep" "^4.5.6"
-    ajv "8.12.0"
-    babel-loader "^8.2.2"
-    cache-control-parser "^2.0.2"
-    chalk "^4.1.2"
-    chardet "^1.4.0"
-    chokidar "^3.5.1"
-    cls-hooked "^4.2.2"
-    content-type "^1.0.4"
-    cookie "^0.4.1"
-    cross-spawn "^7.0.3"
-    decode-uri-component "^0.2.0"
-    deepmerge "^4.2.2"
-    esbuild "^0.14.49"
-    express "^4.17.3"
-    fluentvalidation-ts "^2.2.2"
-    fs-extra "^8.1.0"
-    globby "^11.0.2"
-    http-proxy "^1.18.1"
-    lodash.clonedeep "^4.5.0"
-    lru-cache "^7.14.0"
-    mime-types "^2.1.35"
-    node-fetch "^2.6.1"
-    path-to-regexp "^6.2.0"
-    pino "^6.13.3"
-    qs "^6.11.0"
-    resolve-package-path "^4.0.3"
-    semver "^7.3.5"
-    shelljs "^0.8.5"
-    slash "^3.0.0"
-    tcp-port-used "^1.0.2"
-    ts-loader "^8.2.0"
-    unixify "^1.0.0"
-    uuid "^8.3.2"
-    workbox-build "^6.5.4"
-
-"@edgio/next@file:.yalc/@edgio/next":
-  version "7.0.1"
+"@edgio/next@^7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@edgio/next/-/next-7.0.4.tgz#d80c54370ddf46dbdd9aaa52cf21453e4fbc920b"
+  integrity sha512-KZBO8rJtkhFuiQrW/5v5/iGrm+snaXU0M9QqnVFQv4SncZFIHw8NxjBFzcBKC9SPtmFY+Ex0uJxOEuaRxLN+UQ==
   dependencies:
     "@vercel/nft" "^0.13.1"
     chalk "^4.1.2"
@@ -1137,10 +1100,12 @@
     webpack "^4.0.0"
     webpack-sources "^2.2.0"
 
-"@edgio/prefetch@file:.yalc/@edgio/prefetch":
-  version "7.0.1"
+"@edgio/prefetch@^7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@edgio/prefetch/-/prefetch-7.0.4.tgz#6eabd3337b470c0629288bfdce711ef9df17c486"
+  integrity sha512-CbB5IeuS9zN6T1m+/KOIED02Rn4pjPzI5XEEE8p4JdavyRfgpW8ekun0P2bZmN/zKfGTBxHqp+3Aq6mi123lyA==
   dependencies:
-    "@edgio/core" "^7.0.1"
+    "@edgio/core" "^7.0.4"
     cheerio "^1.0.0-rc.3"
     json-query "^2.2.2"
     workbox-cacheable-response "^5.1.2"
@@ -1150,16 +1115,18 @@
     workbox-routing "^5.1.2"
     workbox-strategies "^5.1.2"
 
-"@edgio/react@file:.yalc/@edgio/react":
-  version "7.0.1"
+"@edgio/react@^7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@edgio/react/-/react-7.0.4.tgz#fa480aac2e8584d0203bdb7d7870e0d95f411570"
+  integrity sha512-Z3KlAH6/hYuaAvg20EvZlvsOA/wjSaAebs35o6uFtmFBRUFTg1le/bPfUkzR19RALlnsqEI3ZqyrMV0pllO6kA==
   dependencies:
     prop-types "^15.8.1"
     react-merge-refs "^1.1.0"
 
-"@edgio/rum@^7.0.1":
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/@edgio/rum/-/rum-7.0.2.tgz#000f18378eb5b83dfbdfeff197a5577638e1d63b"
-  integrity sha512-alLK89DXJi/dbJc/Zhx0tcCvbrr4919xP/Xvx9G5I/ZgULCLGd+3eQ0gpyvP/ikkv4QWwKNkzqIsrI/ffECPug==
+"@edgio/rum@^7.0.4":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@edgio/rum/-/rum-7.0.4.tgz#404e22f32b42552e377b6e3259f293a45fc25ee8"
+  integrity sha512-1aUNkcoDLoaufU4/YOPMBDg2b4TIpQ+EVR7psNIlqOtrTSxUum1bs+EFzsA3+Oscugaemad1D2o3XGz4dVhL4w==
   dependencies:
     lodash.debounce "^4.0.8"
     path-to-regexp "^6.2.1"

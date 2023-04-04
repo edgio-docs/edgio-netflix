@@ -1,7 +1,7 @@
 {
   "name": "layer0-video-browser-example",
   "scripts": {
-    "deploy": "edgio deploy --api-url=https://api.edgio-stage.app",
+    "deploy": "edgio deploy",
     "dev": "next",
     "build": "next build",
     "start": "next start",
@@ -13,12 +13,12 @@
     "react-dom": "^18.0.1"
   },
   "devDependencies": {
-    "@edgio/cli": "file:.yalc/@edgio/cli",
-    "@edgio/core": "file:.yalc/@edgio/core",
-    "@edgio/next": "file:.yalc/@edgio/next",
-    "@edgio/prefetch": "file:.yalc/@edgio/prefetch",
-    "@edgio/react": "file:.yalc/@edgio/react",
-    "@edgio/rum": "^7.0.1",
+    "@edgio/cli": "^7.0.4",
+    "@edgio/core": "^7.0.4",
+    "@edgio/next": "^7.0.4",
+    "@edgio/prefetch": "^7.0.4",
+    "@edgio/react": "^7.0.4",
+    "@edgio/rum": "^7.0.4",
     "@heroicons/react": "^1.0.6",
     "autoprefixer": "^10.4.7",
     "classnames": "^2.3.1",
