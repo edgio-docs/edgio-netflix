@@ -25,6 +25,8 @@ export async function getServerSideProps() {
   const res = await fetch('https://api.tvmaze.com/schedule?country=US&date=2014-12-01')
   const data = await res.json()
 
+  console.log('[home] getServerSideProps')
+
   return {
     props: {
       data,
