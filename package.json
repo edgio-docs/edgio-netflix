@@ -13,11 +13,11 @@
     "react-dom": "^18.0.1"
   },
   "devDependencies": {
-    "@edgio/cli": "^7.0.9",
-    "@edgio/core": "^7.0.9",
-    "@edgio/next": "^7.0.9",
-    "@edgio/prefetch": "^7.0.9",
-    "@edgio/react": "^7.0.9",
+    "@edgio/cli": "^7.0.11",
+    "@edgio/core": "^7.0.11",
+    "@edgio/next": "^7.0.11",
+    "@edgio/prefetch": "^7.0.11",
+    "@edgio/react": "^7.0.11",
     "@edgio/rum": "^7.0.4",
     "@heroicons/react": "^1.0.6",
     "autoprefixer": "^10.4.7",
