@@ -8,9 +8,9 @@
     "format": "prettier --write '**/*' --ignore-unknown"
   },
   "dependencies": {
-    "next": "^13.2.4",
-    "react": "^18.0.1",
-    "react-dom": "^18.0.1"
+    "next": "^13.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@edgio/cli": "^7.0.11",

@@ -99,8 +99,6 @@ export async function getServerSideProps({ params }) {
   const res = await fetch(`https://api.tvmaze.com/shows/${params.id}`)
   const data = await res.json()
 
-  console.log('[show] getServerSideProps', JSON.stringify(params))
-
   return {
     props: {
       data,
